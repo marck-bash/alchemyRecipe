@@ -124,14 +124,15 @@ const names = [
     "Refined Scale of Onyxia"
 ]
 
-const potion = "Elixir of Tongues"
-console.log(potion.replace(/\s/g, ""));
+//Porotyping removal of string white spaces
+// const potion = "Elixir of Tongues"
+// console.log(potion.replace(/\s/g, ""));
 
-let stringNames = names.toString(); //converts the names array into a string called stringNames
-
+//let stringNames = names.toString(); //converts the names array into a string called stringNames
 // console.log(stringNames);
-
 //console.log(stringNames.replace(/\s/g, "")); //replaces all white strings in stringNames with a no-white space version of itself to be put into the potionNames object
+
+
 const potionNames = {
 // GurubashiMojoMadness,
 // AlchemistsStone,
@@ -262,9 +263,12 @@ console.log(Object.values(potionNames.FreeActionPotion));
  //key is a variable that is defined to use in the for loop  //this searches for keys... How do i search just the values, ie: every instance of said value "stranglekelp"
 
 
- 
+function ingredientSearch(ingredient) {
 for (const [key, value] of Object.entries(potionNames)) {  // Querie: for of loop to determine whether or not "stranglekelp" is included in the value field of object: potionNames
-    if (value.includes("stranglekelp")) {
+    if (value.includes(ingredient)) {
     console.log(`Key: ${key}, Value: ${value}`)
     } 
 }
+}
+
+ingredientSearch("stranglekelp");
